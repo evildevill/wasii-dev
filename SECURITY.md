@@ -104,17 +104,17 @@ Security issues in these areas are in scope:
 
 The following are **not** considered security issues:
 
-❌ Denial of Service (DoS/DDoS) attacks
-❌ Social engineering attacks
-❌ Physical attacks
-❌ Issues in third-party services (Kinde, Vercel, MongoDB Atlas)
-❌ Missing security headers (unless exploitable)
-❌ Missing rate limiting (unless exploitable)
-❌ Self-XSS (requires user to paste malicious code)
-❌ Clickjacking on non-sensitive pages
-❌ Descriptive error messages (unless leaking secrets)
-❌ Automated vulnerability scanner output without PoC
-❌ Issues requiring compromised devices or stolen credentials
+- ❌ Denial of Service (DoS/DDoS) attacks
+- ❌ Social engineering attacks
+- ❌ Physical attacks
+- ❌ Issues in third-party services (Kinde, Vercel, MongoDB Atlas)
+- ❌ Missing security headers (unless exploitable)
+- ❌ Missing rate limiting (unless exploitable)
+- ❌ Self-XSS (requires user to paste malicious code)
+- ❌ Clickjacking on non-sensitive pages
+- ❌ Descriptive error messages (unless leaking secrets)
+- ❌ Automated vulnerability scanner output without PoC
+- ❌ Issues requiring compromised devices or stolen credentials
 
 ---
 
