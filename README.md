@@ -16,49 +16,109 @@ This repository serves as a **public issue tracker and documentation hub** for t
 
 ---
 
-## ✨ Platform Features
+## ✨ Key Features
 
-### �‍💻 Portfolio & Professional
-- **Professional Portfolio** - Showcasing cybersecurity research, projects, and expertise
-- **Resume** - Comprehensive professional experience and skills
-- **Projects Showcase** - Featured work including penetration testing, malware development, and security tools
-- **Technical Writing** - In-depth security research and walkthroughs
+- 📝 **Markdown/MDX Blog** – Categories, code highlighting (Shiki), frontmatter, related posts
+- 🌐 **RSS + Sitemap + SEO** – Automatic `feed.xml`, dynamic sitemap, structured data
+- 🔐 **Auth (Kinde)** – User authentication and management (Google and Github)
+- 🛒 **Digital Store** – Products (ebooks/tools/courses) with cart & order persistence
+- 🎓 **Courses & Lectures** – Lecture ordering, progress tracking, karma points foundation
+- 📑 **Course Certificates** – Auto-generated certificates on completion with QR verification, social sharing, and gallery
+- 🎥 **Study Material** – Educational resources
+- 💬 **Comment System** – Moderated threaded comments with moderation
+- 📨 **Full Newsletter System** – Editor, batching, open/click tracking, unsubscribe, queue + cron
+- 📬 **Contact & Feedback** – Validated submissions via API routes
+- 📅 **Consultation Booking** – Schedule intake pipeline
+- 🔗 **URL Shortener** – Create & manage custom short links with analytics tracking
+- 🧾 **Legal Pages** – Terms, Privacy, Cookies, Refund
+- 📊 **Analytics & Tracking** – Google Analytics + Vercel Analytics + Speed Insights
+- 🌗 **Theming** – Dark/light with system preference
+- 📁 **File Storage** – Cloudflare R2 (uploads) + Vercel Blob
+- ⚙️ **Service Worker / PWA** – Offline experience & installable manifest
+- 🛡️ **Security-Oriented** – Strict headers, validation, index-hardened DB schema
+- ⚡ **Performance** – Server Components, minimal client hydration, image optimization, caching strategy
+- 📂 **Modular Architecture** – Clear separation of concerns across `app`, `components`, `lib`
 
-### �📝 Content & Learning
-- **Blog** - Cybersecurity, web development, tutorials, and walkthroughs
-- **Courses** - Interactive learning with progress tracking and certificates
-- **Study Material** - Educational resources for students
-- **Short Lectures** - Quick video lessons
+## 🛠️ Tech Stack
 
-### 🛒 Digital Store
-- E-books, tools, courses, and templates
-- Cryptocurrency payments (Bitcoin, Ethereum, USDT)
-- Secure checkout with Cryptomus
+### 🎨 Frontend
+- ⚡ **Next.js 15** - React framework with App Router
+- ⚛️ **React 19** - UI library
+- 🏷️ **TypeScript** - Type-safe JavaScript
+- 🎨 **Tailwind CSS** - Utility-first CSS framework
+- 🎛️ **Radix UI** - Accessible UI components
+- 🌙 **Next Themes** - Dark/light mode support
+- ✅ **React Hook Form** - Form validation
+- 🔔 **Sonner** - Toast notifications
+- 🎨 **Lucide React** - Icon library
+- 🎭 **Motion** - Animation library
+- 🏗️ **Zod** - Schema validation
+- 🧩 **Custom Hooks** - e.g., `use-cart` for shopping cart state
+- 🧰 **UI Component Library** - Modular, accessible components in `/components/ui/`
 
-### 💌 Newsletter
-- Weekly updates on cybersecurity and tech
-- Curated content and exclusive insights
+### 🔙 Backend & Database
+- 🏗️ **Next.js API Routes** - Serverless functions
+- 🗄️ **MongoDB** - NoSQL database
+- 📜 **Mongoose** - MongoDB object modeling
+- ✉️ **Nodemailer** - Email sending capabilities
+- 🛠️ **Custom API Endpoints** - For contact, newsletter, orders, study material, user management, etc.
 
-### 🎓 Certificates
-- Auto-generated certificates on course completion
-- QR code verification
-- Share to LinkedIn, Twitter/X, Facebook
+### 🔑 Authentication
+- 🔐 **Kinde Auth** - User authentication and management
 
-### 👤 User Features
-- Personal dashboard
-- Public profile pages (`/u/username`)
-- Blue verification badges
-- Course progress tracking
-- Certificate gallery
+### 📝 Content Management
+- 📜 **Gray Matter** - Markdown frontmatter parser
+- 🛠️ **Unified** - Markdown processing ecosystem
+- 🔄 **Rehype/Remark** - HTML/Markdown transformation
+- 🎨 **Shiki** - Code syntax highlighting
+- 🗂️ **Content Types**: Blog posts, walkthroughs, bug bounty resources, study material, short lectures, guides, and more (see `/content`)
 
-### 🎯 About Waseem Akram
-- **Cybersecurity Researcher** - Specializing in penetration testing and vulnerability research
-- **Security Consultant** - Offering professional security consultations
-- **Developer** - Full-stack development with focus on security
-- **Educator** - Creating content to help others learn cybersecurity
-- **Bug Bounty Hunter** - Active in responsible disclosure programs
+### 🚀 Development & Deployment
+- 🔍 **ESLint** - Code linting
+- 📦 **TypeScript** - Type checking
+- 🌍 **Vercel** - Deployment platform
+- ⚡ **Turbopack** - Fast bundling for development
+- 🛠️ **Scripts**: Database seeding, migration, and utility scripts in `/scripts`
+- 🧪 **Testing**: Playwright e2e testing
+- 🔄 **CI/CD**: GitHub Actions, Vercel auto-deploy
 
 ---
+
+---
+## 🛒 Store & E-commerce
+
+- Digital products: ebooks, courses, tools, templates
+- Secure checkout and order confirmation
+- User dashboard for order history and downloads
+- Cart management with custom React hook (`use-cart`)
+
+---
+## 📚 Content Types
+
+- Blog posts (markdown, with code, images, frontmatter)
+- Walkthroughs and guides (e.g., TryHackMe, bug bounty, Linux, cloud)
+- Study material (assignments, handouts, quizzes)
+- Short lectures (video-based, categorized)
+- Product documentation
+
+---
+
+## 📈 SEO & Analytics
+
+Implemented via `components/seo.tsx` & structured data in `components/schema-org.tsx`. Dynamic sitemap (`/sitemap.xml`) + `feed.xml` for syndication. Google Analytics + Vercel Analytics + Speed Insights included.
+
+Highlights:
+- Canonicals & OG tags from frontmatter + site defaults
+- JSON-LD (BlogPosting, BreadcrumbList) injection
+- Image optimization (AVIF/WebP) via Next.js image config
+- Remote host allowlist (see Images section)
+## 📡 RSS Feed
+
+- Auto-generated RSS available at `/feed.xml` (built from Markdown posts in `/content`).
+- Caches for a day; update frequency aligns with content changes.
+
+---
+## 📲 PWA & Offline Support
 
 ## 🐛 How to Report Issues
 
