@@ -178,16 +178,6 @@ We take security seriously and will respond within 48 hours. See [SECURITY.md](S
 
 ---
 
-## 🛠️ Tech Stack
-
-- **Frontend**: Next.js 15, React 19, TypeScript, Tailwind CSS v4
-- **Backend**: Next.js API Routes, MongoDB
-- **Auth**: Kinde Auth
-- **Payments**: Cryptomus (cryptocurrency)
-- **Content**: Markdown/MDX with syntax highlighting
-- **Storage**: Cloudflare R2, Vercel Blob
-- **Email**: Nodemailer (SMTP)
-
 ---
 
 ## 🤝 Contributing
